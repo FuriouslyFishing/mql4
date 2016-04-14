@@ -7,30 +7,21 @@
 //+------------------------------------------------------------------+
 #property copyright "Copyright ${2}, ${3}"
 #property link      "${4}"
+#property version   "${5}"
 
 #property indicator_chart_window
-#property indicator_buffers 2
-#property indicator_color1 Red
-#property indicator_color2 Green
 
 //--- buffers
-
-double ${5:ExtMapBuffer1}[];
-double ${6:ExtMapBuffer2}[];
 
 //+------------------------------------------------------------------+
 //| Custom indicator initialization function                         |
 //+------------------------------------------------------------------+
 int OnInit()
   {
-//---- indicators
-   SetIndexStyle(0,DRAW_LINE);
-   SetIndexBuffer(0,${5:ExtMapBuffer1});
-   SetIndexStyle(1,DRAW_LINE);
-   SetIndexBuffer(1,${6:ExtMapBuffer2});
-   ${7}
-//----
-   return(0);
+//--- indicator buffers mapping
+   ${6}
+//---
+   return(INIT_SUCCEEDED);
   }
 //+------------------------------------------------------------------+
 //| Custom indicator deinitialization function                       |
@@ -38,20 +29,28 @@ int OnInit()
 int OnDeinit()
   {
 //----
-   ${8}  
+   ${7}  
 //----
    return(0);
   }
 //+------------------------------------------------------------------+
 //| Custom indicator iteration function                              |
 //+------------------------------------------------------------------+
-int OnStart()
+int OnCalculate(const int rates_total,
+                const int prev_calculated,
+                const datetime &time[],
+                const double &open[],
+                const double &high[],
+                const double &low[],
+                const double &close[],
+                const long &tick_volume[],
+                const long &volume[],
+                const int &spread[])
   {
-   int    counted_bars=IndicatorCounted();
-//----
+//---
    ${0}
-//----
-   return(0);
+//--- return value of prev_calculated for next call
+   return(rates_total);
   }
 //+------------------------------------------------------------------+]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
