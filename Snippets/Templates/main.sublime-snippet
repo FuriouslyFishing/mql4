@@ -5,10 +5,10 @@
 //| Copyright ${2:2016} , ${3:Name of organisation} 
 //| ${4:website URL}
 //+------------------------------------------------------------------+
-
 #property copyright "Copyright ${2}, ${3}"
 #property link      "${4}"
 #property version   "${5:1.0}
+#property strict
 
 //+------------------------------------------------------------------+
 //| OnInit function                                                  |
