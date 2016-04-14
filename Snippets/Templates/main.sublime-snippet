@@ -5,42 +5,37 @@
 //| Copyright ${2:2016} , ${3:Name of organisation} 
 //| ${4:website URL}
 //+------------------------------------------------------------------+
+
 #property copyright "Copyright ${2}, ${3}"
 #property link      "${4}"
-
-//--- input parameters
-extern int       ${5:ExtParam1=0};
-extern int       ${6:ExtParam2=0};
+#property version   "${5:1.0}
 
 //+------------------------------------------------------------------+
-//| expert initialization function                                   |
+//| OnInit function                                                  |
 //+------------------------------------------------------------------+
-int OnInit()
+void OnInit()
+  {
+//----
+   ${6}
+//----
+  }
+//+------------------------------------------------------------------+
+//| OnDeinit function                                                |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
   {
 //----
    ${7}
 //----
-   return(0);
   }
 //+------------------------------------------------------------------+
-//| expert deinitialization function                                 |
+//| OnStart function                                                 |
 //+------------------------------------------------------------------+
-int OnDeinit()
-  {
-//----
-   ${8}
-//----
-   return(0);
-  }
-//+------------------------------------------------------------------+
-//| expert start function                                            |
-//+------------------------------------------------------------------+
-int OnStart()
+void OnStart()
   {
 //----
    ${0}
 //----
-   return(0);
   }
 //+------------------------------------------------------------------+]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
